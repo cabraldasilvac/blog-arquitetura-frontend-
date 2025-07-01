@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog com Arquitetura Frontend Escalável
 
-## Getting Started
+## 🚀 Tecnologias
 
-First, run the development server:
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- JSON Server (API fake)
+
+## � Arquitetura
+
+```plaintext
+src/
+├── app/            # Rotas
+├── components/     # UI e Lógica
+├── lib/            # API e Utilitários
+└── types/          # Tipos
+```
+
+⚙️ Como Rodar
+
+1. Clone o repositório
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicia a API fake ( em outro terminal):
+
+```bash
+json-server --watch db.json --port 3001
+```
+
+4. Rode o porjeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 Links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Deploy na Vercel](https://vercel.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### **🚀 Passo 5: Deploy na Vercel**
 
-To learn more about Next.js, take a look at the following resources:
+1. Suba o projeto para o GitHub.
+2. Acesse [Vercel](https://vercel.com), importe o repositório.
+3. Configure a **variável de ambiente** `API_URL` (se usasse uma API real).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **💡 Dicas Extras**
 
-## Deploy on Vercel
+- **Adicione testes** (opcional):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+  npm install -D vitest @testing-library/react
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Documente componentes com Storybook:
+
+```bash
+npx storybook@latest init
+```
