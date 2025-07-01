@@ -20,6 +20,11 @@ src/
 ⚙️ Como Rodar:
 
 1. Clone o repositório
+
+```bash
+https://github.com/cabraldasilvac/blog-arquitetura-frontend-.git
+```
+
 2. Instale as dependências:
 
 ```bash
@@ -40,7 +45,7 @@ npm run dev
 
 🔗 Links
 
-- [Deploy na Vercel](https://vercel.com/)
+- [Deploy na Vercel](https://blog-arquitetura-frontend.vercel.app)
 
 ---
 
