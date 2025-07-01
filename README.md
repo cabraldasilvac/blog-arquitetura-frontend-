@@ -17,7 +17,7 @@ src/
 └── types/          # Tipos
 ```
 
-⚙️ Como Rodar
+⚙️ Como Rodar:
 
 1. Clone o repositório
 2. Instale as dependências:
