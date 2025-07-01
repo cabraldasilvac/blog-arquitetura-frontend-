@@ -32,7 +32,7 @@ npm install
 json-server --watch db.json --port 3001
 ```
 
-4. Rode o porjeto:
+4. Rode o projeto:
 
 ```bash
 npm run dev
