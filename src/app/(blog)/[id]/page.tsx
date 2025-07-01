@@ -1,8 +1,8 @@
 import { fetchPostById } from "@/lib/api";
 
-export default async function PostPage({ params }: { params: unknown }) {
-  const typedParams = params as { id: string };
-  const post = await fetchPostById(typedParams.id);
+export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {
+  const awaitedParams = await params;
+  const post = await fetchPostById(awaitedParams.id);
   return (
     <article>
       <h1>{post.title}</h1>
