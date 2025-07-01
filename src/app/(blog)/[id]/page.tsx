@@ -6,7 +6,7 @@ interface PostPageProps {
   };
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostPage({ params }: { params: any }) {
   const post = await fetchPostById(params.id);
   return (
     <article>
