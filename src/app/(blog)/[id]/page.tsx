@@ -1,6 +1,12 @@
 import { fetchPostById } from "@/lib/api";
 
-export default async function PostPage({ params }: { params: { id: string } }) {
+interface PostPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function PostPage({ params }: PostPageProps) {
   const post = await fetchPostById(params.id);
   return (
     <article>
